@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
     <title>freakstar</title>
     <style>
+        :root {
+            --background-light: #F5F5F5;
+            --background-dark: #111111;
+            --text-color-light: #111111;
+            --text-color-dark: #F5F5F5;
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background: linear-gradient(to bottom right, #87CEEB, #ADD8E6); /* light blue gradient background */
+                color: var(--text-color-light);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(to bottom right, #111111, #333333); /* dark gradient background */
+                color: var(--text-color-dark);
+            }
+        }
+
         body {
-            background-color: #f0f8ff; /* light blue-ish background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,7 +38,6 @@
         }
         
         .textbox {
-            background-color: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
